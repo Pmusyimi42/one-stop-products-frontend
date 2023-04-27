@@ -1,0 +1,11 @@
+.carousel {
+    display: flex;
+    float: right;
+    width : 60%;
+    height: 360px;
+    
+ }
+
+ .d-block{
+    height: 360px;
+ }

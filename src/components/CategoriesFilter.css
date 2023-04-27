@@ -1,0 +1,28 @@
+.container-md{
+    /* border-radius: 80px;
+    background-color: #F47458; */
+    margin-bottom: 500px;
+    margin-left: 0px;
+}
+
+.tabel{
+    border-radius: 10px;
+    background-color: #F47458;
+    width: 30%;
+    float: left; 
+    height: 350px;   
+    margin-left: 0px;
+
+}
+
+table td, table th {
+    padding: 10px;
+  }
+
+
+  
+ 
+ /* .carousel-indicator{
+    width: 20%;
+    color: blue
+ } */
