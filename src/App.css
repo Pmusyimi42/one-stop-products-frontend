@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+
+
+.App {
+  background-color:  #D9D9D9;
+}
+
+.home{
+  background-color:  #D9D9D9;
+  height: 800vh;
+}
+
+.carousel slide{
+   display: flex;
+   float: right;
+}
+
+
+
+
+.card{
+  height: 70%;
+  /* position: absolute;
+  z-index: 1; */
+  background-color: #F47458;
+  color:  #D9D9D9;
+  /* width: 365px;
+  cursor: pointer;
+  margin-bottom: 100px; */
+
+}
+.card img{
+  height: 200px;
+}
+
+.card:hover{
+  /* display: block; */
+  height: 350px;
+  width: 300px;
+}
+
+.card-body{
+  background-color: #F47458;
+}
+
+
+.hmBtn:hover {
+  background-color: #F47458;
+
+}
+.hmBtn{
+  margin-left: 600px;
+  margin-top: 50px;
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

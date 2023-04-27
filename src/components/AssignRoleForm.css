@@ -1,0 +1,25 @@
+.permissions div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.permissions div:first-of-type {
+  margin-bottom: 16px;
+}
+
+.permissions div:last-of-type {
+  margin-top: 16px;
+}
+
+.permissions label {
+  flex-basis: 25%; /* add this line */
+}
+
+.permissions input[type="checkbox"] {
+  margin-left: 8px;
+  flex-basis: 15%; /* add this line */
+}
+

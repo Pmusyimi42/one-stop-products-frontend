@@ -1,0 +1,112 @@
+
+.about{
+    margin-top: 100px;
+    font-family: "Fredoka", sans-serif;
+    height: 150vh;
+
+}
+
+
+.about_wrapper{
+margin: 40px;
+}  
+
+
+
+.descript{
+    margin-left: 300px;
+    margin-top: 0px;
+    display: flex;
+    float: right;
+    font-weight: bold;
+
+}
+
+.desc{
+    display: flex;
+    float: left;
+    margin-right: 400px;
+    margin-top: 60px;
+    margin-left: 20px;
+    font-weight: bold;
+
+}
+
+.abtUs{
+    margin-left: 300px;
+    font-weight: 900;
+    font-family: "Fredoka", sans-serif;
+    }
+
+.wrapper{
+    margin-right: 500px;
+    margin-top: 0px;
+    display: flex;
+    float: right;
+   
+}
+
+h2 {
+    width: 110px;
+    margin-bottom: 50;
+    height: 50px;
+    background-color:  #F47458;
+    font-weight: bold;
+    position: relative;
+    animation: mymove 5s infinite;
+  }
+  
+  #h21 {animation-timing-function: linear;}
+  #h22 {animation-timing-function: ease;}
+  #h23 {animation-timing-function: ease-in;}
+  #h24 {animation-timing-function: ease-out;}
+  #h25 {animation-timing-function: ease-in-out;}
+  
+  @keyframes mymove {
+    from {left: 0px;}
+    to {left: 330px;}
+  }
+  
+
+  
+  .abtUs {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .abtUs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient( darkslategrey, rgba(255, 255, 255, 0));
+    transform: scale(1);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 1s ease-out;
+    animation: sparkle 1s linear infinite;
+  }
+  
+  @keyframes sparkle {
+    0% {
+      opacity: 0;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.5);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+  
+ 
+  
+  
+  
