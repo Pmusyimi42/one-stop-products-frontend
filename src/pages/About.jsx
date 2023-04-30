@@ -12,10 +12,10 @@ function About() {
        <h1 className='abtUs'>About Us</h1>
        </div>
         <div className='about'>
-         <h2 id="h21">SHOP</h2>
-         <h2 id="h22">with</h2>
-         <h2 id="h21">EASE</h2>
-          <h2 id="h22">always</h2>
+         <h3 id="h31">SHOP</h3>
+         <h3 id="h32">with</h3>
+         <h3 id="h31">EASE</h3>
+          <h3 id="h32">always</h3>
               
 
           <div className="descript">

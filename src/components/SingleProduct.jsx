@@ -1,7 +1,9 @@
 import React, { useState,useEffect } from "react"
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import "./SingleProduct.css";
-export default function SingleProduct() {
+
+
+export default function SingleProduct({addToCart}) {
   const [quantity, setQuantity] = useState(1);
   const incrementQuantity = () => {
     setQuantity(quantity + 1);
@@ -12,7 +14,7 @@ export default function SingleProduct() {
     }
   };
 
-
+  const navigate = useNavigate()
   const{id}= useParams()
   const [items, setItems]= useState(null)
 
@@ -44,7 +46,28 @@ export default function SingleProduct() {
             <span>{quantity}</span>
             <button onClick={incrementQuantity}>+</button>
           </div>
-          <button className="add-to-cart-btn">Add to Cart</button>
+          <button className="add-to-cart-btn" onClick={(e)=>{
+               e.stopPropagation()
+               e.preventDefault()
+               fetch("/cart_items",{
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  user_id:2,
+                  quantity: quantity,
+                  product_id: items.product.id
+                }),
+               })
+               .then((res) => res.json())
+               .then((data) => {
+                addToCart(data)
+                navigate(`/cart`)
+               })
+           }}>
+               Add to cart
+           </button>
+           {/* <button className="add-to-cart-btn">Add to Cart</button> */}
+
         </div>
       </div>
       <div className="description-container">

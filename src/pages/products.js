@@ -6,7 +6,7 @@ import './product.css';
 
 
 
-export default function Products() {
+export default function Products({n,addToCart}) {
   const [items, setItems] = useState([])
   const [search, setSearch] = useState("")
   const [list, setList] = useState([])
@@ -70,11 +70,11 @@ const filteredCampaigns=campaignsToDisplay.filter((campaign)=>{
                     {
                 list.length > 0 ? (
                   list.map((item, index) => {
-                    return <ProductCard key={index} item={item} />
+                    return <ProductCard key={index} item={item} addToCart={addToCart}/>
                   })
                 ) : (
                   searchItems.map((item, index) => {
-                    return <ProductCard key={index} item={item} />
+                    return <ProductCard key={index} item={item} addToCart={addToCart}/>
                   })
                 )
               }
@@ -103,7 +103,7 @@ for (let i=1; i <=numPages; i++) {
   return (
     <div className='home'>
       <div>
-        <Navlink setSearch={setSearch} search={search}/>
+        <Navlink setSearch={setSearch} search={search} n={n}/>
       </div>
       
       <div className="row">

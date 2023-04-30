@@ -10,42 +10,44 @@ import { BsPersonCheckFill } from "react-icons/bs";
 
 
 
-function Navlink({search, setSearch}) {
+function Navlink({search, setSearch,n}) {
   return (
-    <div className='navlink'>
+    <div className='navlink flex-row flex-wrap'>
       <div>
         <img src={image}/>
       </div>
       <div className='nav mt-5'>
         <nav className="navba">
           <div className="container-fluid">
-          <form className="d-flex" role="search">
+          <div className="d-flex" role="search">
             <input className="form-control me-2" type="text" value ={search} onChange={(e)=>setSearch(e.target.value)} placeholder="Search" aria-label="Search"/>
             <button className="btn btn-outline-dark" type="submit">Search</button>
-          </form>
+          </div>
           </div>
         </nav>  
       </div>
-     
-      
+      <div className='mb-12'>   
       <div className="create">
         <Link to={"/signup"} style={{ color: "black" }}>
           <BsFillPeopleFill />
-            Sign Up
+            Account
         </Link>
       </div>
 
       <div className="create">
-        <Link to={"/login"} style={{ color: "black" }}>
+        <Link to={"/signin"} style={{ color: "black" }}>
           <BsPersonCheckFill />
             Login
         </Link>
-      </div>         
-          
+      </div>
+                
+      
       <div className="cart">
-          <Link to={"/signup"} style={{ color: "black" }}><BsBagCheckFill />Cart</Link>
+        <div>{n}</div>
+          <Link to={"/cart"} style={{ color: "black" }}><BsBagCheckFill />Cart</Link>
       </div>
 
+     </div>
       
     </div>
   )

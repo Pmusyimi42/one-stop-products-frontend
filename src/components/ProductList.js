@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import {useHistory } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import EditProduct from './EditProduct';
 
 function ProductList() {
+  const navigate = useNavigate()
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const history = useHistory()
   const [showActions,setShowActions] = useState(false)
   const [editProductId, setEditProductId] = useState(false);
 
@@ -112,7 +112,7 @@ function ProductList() {
                 <div className=''>
                   <button className="hoverleft hover:bg-red-600 mx-2 rounded-lg p-2 hover:text-white" onClick={(e)=>{
                       e.stopPropagation()
-                      history.push(`/products/${product.id}`)
+                      navigate(`/products/${product.id}`)
                   }}>
                       View
                   </button> 

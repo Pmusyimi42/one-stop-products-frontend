@@ -8,7 +8,7 @@ function UserDetails() {
   const [editUserId, setEditUserId] = useState(null);
 
   useEffect(() => {
-    fetch('/admin_users')
+    fetch('/users')
       .then(response => response.json())
       .then(data => setUsers(data))
       .catch(error => console.error(error));
@@ -16,7 +16,7 @@ function UserDetails() {
   
   const handleUpdateUser = (userId, name, email, role, password) => {
     const userToUpdate = { name, email, role, password };
-    fetch(`/admin_users/${userId}`, {
+    fetch(`/users/${userId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

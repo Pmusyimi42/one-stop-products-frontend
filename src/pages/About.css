@@ -46,8 +46,8 @@ margin: 40px;
    
 }
 
-h2 {
-    width: 110px;
+h3 {
+    width: 120px;
     margin-bottom: 50;
     height: 50px;
     background-color:  #F47458;
@@ -56,11 +56,11 @@ h2 {
     animation: mymove 5s infinite;
   }
   
-  #h21 {animation-timing-function: linear;}
-  #h22 {animation-timing-function: ease;}
-  #h23 {animation-timing-function: ease-in;}
-  #h24 {animation-timing-function: ease-out;}
-  #h25 {animation-timing-function: ease-in-out;}
+  #h31 {animation-timing-function: linear;}
+  #h32 {animation-timing-function: ease;}
+  #h33 {animation-timing-function: ease-in;}
+  #h34 {animation-timing-function: ease-out;}
+  #h35 {animation-timing-function: ease-in-out;}
   
   @keyframes mymove {
     from {left: 0px;}

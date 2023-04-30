@@ -1,14 +1,14 @@
-import React, {useState} from "react";
-import { useHistory} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import { useNavigate} from "react-router-dom";
 
 
 
 
 
 
-function ProductCard ({item,key}){
-   const history = useHistory()
-   const [showActions,setShowActions] = useState(false)
+function ProductCard ({item,key,addToCart}){
+  const navigate = useNavigate()
+  const [showActions,setShowActions] = useState(false)
 
 
    
@@ -16,7 +16,7 @@ function ProductCard ({item,key}){
   return(
     
     <div className="col-md-3 mb-5"  onClick={()=>{
-        history.push(`/product_categories/${item.id}`) 
+        navigate(`/product_categories/${item.id}`) 
    }} onMouseEnter ={()=> setShowActions(true)} onMouseLeave ={()=> setShowActions(false)}>
    
    <div className="card h-100 text-center p-4" key={item.id}>
@@ -28,10 +28,24 @@ function ProductCard ({item,key}){
          <div className="card-body">
            {showActions? <p className="card-text" style={{marginTop:"5px"}}></p> :null}
            {showActions?
-           <button className="hoverleft" onClick={(e)=>{
+           <button className="hover" onClick={(e)=>{
                e.stopPropagation()
                e.preventDefault()
-               history.push(`/products/${item.id}`)
+                 fetch("/cart_items",{
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({
+                    user_id:2,
+                    quantity:1,
+                    product_id: item.product.id
+                  }),
+                 })
+                 .then((res) => res.json())
+                 .then((data) => {
+                  addToCart(data)
+                  navigate(`/cart`)
+                 })
+                  
            }}>
                Add to cart
            </button>

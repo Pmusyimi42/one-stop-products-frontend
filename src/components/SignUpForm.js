@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import './SignUpForm.css';
-import { useHistory} from "react-router-dom";
-import cartoon from "../images2/signup.png"
+// import { Link } from "react-router-dom";
 
 
 
@@ -10,10 +9,6 @@ function SignUpForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  const history = useHistory();
-  
-  
- 
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -53,8 +48,6 @@ function SignUpForm() {
         setEmail('');
         setPassword('');
         setPasswordConfirmation('');
-        //this redirects to login page after sign up
-        history.push("/login");
       })
       .catch((error) => {
         console.error(error);
@@ -62,14 +55,9 @@ function SignUpForm() {
   };
 
   return (
-    <div className="signup-form border">
-    <div className="mx-auto flex justify-center items-center">
-        <div className="hidden md:block max-w-lg">
-            <img className="w-full" src={cartoon} alt="Sitting" />
-        </div>
+    
 
     <form onSubmit={handleSubmit}>
-
       <label htmlFor="name">Name</label>
       <input
         type="text"
@@ -108,8 +96,6 @@ function SignUpForm() {
 
       <button type="submit">Sign Up</button>
     </form>
-    </div>
-    </div>
     
   );
 }

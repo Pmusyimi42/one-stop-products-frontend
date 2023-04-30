@@ -11,7 +11,7 @@ function IndividualIntervalsExample() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>HP laptop Envy 13</h3>
+          <h4>HP laptop Envy 13</h4>
           <p>The HP Envy 13 should BE ABLE to do ANY job nicely; it's compact and highlycapable</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -22,7 +22,7 @@ function IndividualIntervalsExample() {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3>NEW BALANCE SHOES</h3>
+          <h4>NEW BALANCE SHOES</h4>
           <p> Get the new New Balance shoes launched just this week NOW!! 50% OFF.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -33,7 +33,7 @@ function IndividualIntervalsExample() {
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h3>Eames Lounge</h3>
+          <h4>Eames Lounge</h4>
           <p>
           Innovative: all foam. Designed for delivery as a flat pack—open the box, and the chair grows out of a flat disc.
           </p>
