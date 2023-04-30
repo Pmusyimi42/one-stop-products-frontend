@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 // import Preview from './Preview';
 import ProductList from './ProductList';
-import { useHistory} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 
 function AddProducts() {
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   // const navigate = useNavigate()
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -16,7 +16,6 @@ function AddProducts() {
   const [price, setPrice] = useState();
   const [change, setOnChange] = useState(false)
   // const [showActions,setShowActions] = useState(false)
-  const history = useHistory();
 
 
 

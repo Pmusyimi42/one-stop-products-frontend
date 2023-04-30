@@ -34,11 +34,11 @@
   height: 200px;
 }
 
-.card:hover{
-  /* display: block; */
+/* .card:hover{
+  display: block;
   height: 350px;
   width: 300px;
-}
+} */
 
 .card-body{
   background-color: #F47458;
@@ -63,7 +63,54 @@
   transition: background-color 0.3s ease-in-out;
 }
 
+#content{
+  /* display: flex;
+  flex-wrap:wrap; */
+  /* justify-content: space-around; */
+  
+}
+
  
+/* --------------------------Scrolling----------------------- */
+.scroll-buttons-left {
+  left: 0;
+}
+.scroll-buttons-right {
+  right: 0;
+}
+.list-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.scroll-buttons-right, .scroll-buttons-left {
+  color: var(--bgA);
+  cursor: pointer;
+  z-index: 2;
+  font-size: 30px;
+  position: absolute;
+}
+.scroll-buttons-right:hover, .scroll-buttons-left:hover {
+  color: olive;
+}
+
+
+
+.products-list {
+  display: flex;
+  padding: 10px;
+  overflow-x: scroll;
+  flex-grow: 2;
+}
+.products-list::-webkit-scrollbar {
+  height: 7px;
+  background-color: transparent;
+}
+.products-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--dark);
+}
+
  
 
 
